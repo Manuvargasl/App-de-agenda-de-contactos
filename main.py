@@ -1,5 +1,6 @@
-import os
+import os, time
 os.system("cls")
+from functions import *
 
 while True:
     print ("\t\t Mini Agenda de Contactos.\n")
@@ -12,8 +13,11 @@ while True:
         opcion = int(input("Elija una opcion.\n"))
         if opcion == 1:
             print("\t Agregar un contacto:")
+            agregar_usuario()
         elif opcion == 2:
             print("\t Listar contactos:")
+            listar_contacto()
+            
         elif opcion == 3:
             print("\t Buscar un contacto por nombre.")
         elif opcion == 4:
@@ -23,6 +27,7 @@ while True:
             print("Chao pecao'...")
             break
         else:
-            print("La oipcion ingresada no exixte")
+            print("La opcion ingresada no exixte")
     except:
         print("Valor ingresado debe ser numerico")
+
